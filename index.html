@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC calculadora</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+
+<body>
+    <div class="borda">
+        <section class="itens">
+            <div>
+                <h1>Insira seus dados</h1>
+                <p>Peso:</p>
+                <input type="number" name="" id="peso" class="numero">
+
+                <p>Altura:</p>
+                <input type="number" name="" id="altura" class="numero">
+
+            </div>
+            <p class="resultado"></p>
+            <div>
+                <p class="botoes">
+                    <input type="button" value="Calcular" onclick="calcular()" class="botao">
+                    <input type="button" value="Mostrar tabela" onclick="mostrar()" class="botao">
+                </p>
+            </div>
+        </section>
+
+        <section id="tabela" class="tabela1">
+            <table border="2">
+                <tr>
+                    <th>IMC</th>
+                    <th>Classificações</th>
+                </tr>
+                <tr>
+                    <td id="abaixo">Menor do que 18,5</td>
+                    <td id="abaixo2">Abaixo do peso normal</td>
+                </tr>
+                <tr>
+                    <td id="normal">18,5 - 24,9</td>
+                    <td id="normal2">Peso normal</td>
+                </tr>
+                <tr>
+                    <td id="excesso">25 - 29,9</td>
+                    <td id="excesso2">Excesso de peso</td>
+                </tr>
+                <tr>
+                    <td id="obs1">30,0 - 34,9</td>
+                    <td id="obs12">Obesidade classe I</td>
+                </tr>
+                <tr>
+                    <td id="obs2">35,0 - 39,9</td>
+                    <td id="obs22">Obesidade classe II</td>
+                </tr>
+                <tr>
+                    <td id="obs3">Maior ou igual a 40,0</td>
+                    <td id="obs32">Obesidade classe II</td>
+                </tr>
+            </table>
+            <input type="button" value="Fechar" class="botao" onclick="fechar()">
+        </section>
+    </div>
+
+</body>
+<script src="./index.js"></script>
+
+</html>
