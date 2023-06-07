@@ -9,29 +9,28 @@ function calcular() {
     document.getElementById('tabela').style.display = "flex";
 
     if (cal <= 18.5) {
-        document.getElementById('abaixo').classList.add("ativa");
-        document.getElementById('abaixo2').classList.add("ativa");
-        
+        toggle('abaixo');
+        toggle('abaixo2');
     }
     if (cal > 18.5 && cal < 24.9) {
-        document.getElementById('normal').classList.add("ativa");
-        document.getElementById('normal2').classList.add("ativa");
+        toggle('normal');
+        toggle('normal2');
     }
     if (cal >= 25 && cal <=29.9){
-        document.getElementById('excesso').classList.add("ativa");
-        document.getElementById('excesso2').classList.add("ativa");
+        toggle('excesso');
+        toggle('excesso2');
     }
     if (cal >=30 && cal <34.9){
-        document.getElementById('obs1').classList.add("ativa");
-        document.getElementById('obs12').classList.add("ativa");
+        toggle('obs1');
+        toggle('obs12');
     }
     if (cal >=35 && cal <= 39.9){
-        document.getElementById('obs2').classList.add("ativa");
-        document.getElementById('obs22').classList.add("ativa");
+        toggle('obs2');
+        toggle('obs22');
     }
     if(cal > 40.0){
-        document.getElementById('obs3').classList.add("ativa");
-        document.getElementById('obs32').classList.add("ativa");
+        toggle('obs3');
+        toggle('obs32');
     }
 }
 function mostrar() {
@@ -40,4 +39,14 @@ function mostrar() {
 
 function fechar() {
     document.getElementById('tabela').style.display = "none";
+}
+
+function toggle(id) {
+    let atv = document.getElementsByClassName('ativa');
+    if (atv.length > 1 ) {
+        atv[0].classList.remove('ativa');
+        atv[0].classList.remove('ativa');
+    }
+    document.getElementById(id).classList.add("ativa");
+    document.getElementById(id).classList.add("ativa");
 }
